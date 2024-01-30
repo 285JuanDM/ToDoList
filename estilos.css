@@ -1,16 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
 body{
     margin: 0;
 }
 
+h1{
+    box-sizing: border-box;
+    font-size: 50px;
+    margin: 10px;
+    margin-bottom: 0.5%;
+}
+
+h1::after{
+    content: "";
+    display: block; 
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding-bottom: 5px; 
+}
+
+hr{
+    margin: 0 10px;
+}
+
 .principal{
     display: grid;
-    grid-template-columns: minmax(200px, 25%) 1fr;
+    grid-template-columns: 23% 1fr;
 }
 
 .aside{
-    border: 2px solid black;
+    background: rgb(33, 33, 33);
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: white;
+    height: 100vh;
+}
+
+.botones_constantes{
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    background: rgb(33, 33, 33);
+}
+
+.botones_constantes button, .botones_variables button{
+    background: rgb(33, 33, 33);
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+
+    &:hover{
+        background: rgb(46, 46, 46);
+    }
+
+    &:focus{
+        background: rgb(65, 65, 65);
+    }
+}
+
+.botones_variables{
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+}
+
+.crea_botones{
+    position: sticky;
+    top: 100%;
+    height: 50px;
+    width: 100%;
+
+    background: rgb(33, 33, 33);
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+
+    &:hover{
+        background: rgb(46, 46, 46);
+    }
 }
 
 .seccion{
-    border: 2px solid black;
+    height: 100vh;
 }
