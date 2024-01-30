@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: minmax(200px, 25%) 1fr;
+}
+
+.aside{
+    border: 2px solid black;
+}
+
+.seccion{
+    border: 2px solid black;
+}
