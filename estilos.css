@@ -1,34 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
 
-body{
+body {
     margin: 0;
 }
 
-h1{
+h1 {
     box-sizing: border-box;
     font-size: 50px;
     margin: 10px;
     margin-bottom: 0.5%;
 }
 
-h1::after{
+h1::after {
     content: "";
-    display: block; 
+    display: block;
     width: 100%;
     border-bottom: 4px solid white;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 }
 
-hr{
+hr {
     margin: 0 10px;
 }
 
-.principal{
+.principal {
     display: grid;
-    grid-template-columns: 23% 1fr;
+    grid-template-columns: 20% 1fr;
 }
 
-.aside{
+/*PARTE DEL ASIDE*/
+
+.aside {
     background: rgb(33, 33, 33);
     font-family: 'Nunito', sans-serif;
     text-align: center;
@@ -36,13 +38,14 @@ hr{
     height: 100vh;
 }
 
-.botones_constantes{
+.botones_constantes {
     display: grid;
     grid-template-rows: repeat(3, 50px);
     background: rgb(33, 33, 33);
 }
 
-.botones_constantes button, .botones_variables button{
+.botones_constantes button,
+.botones_variables button {
     background: rgb(33, 33, 33);
     font-family: 'Nunito', sans-serif;
     border: none;
@@ -50,38 +53,88 @@ hr{
     font-size: 17px;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background: rgb(46, 46, 46);
     }
 
-    &:focus{
+    &:focus {
         background: rgb(65, 65, 65);
     }
 }
 
-.botones_variables{
+.botones_variables {
     display: grid;
     grid-template-rows: repeat(3, 50px);
 }
 
-.crea_botones{
+.crea_botones {
     position: sticky;
     top: 100%;
     height: 50px;
     width: 100%;
 
     background: rgb(33, 33, 33);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     border: none;
     color: white;
     font-size: 28px;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background: rgb(46, 46, 46);
     }
 }
 
-.seccion{
-    height: 100vh;
+/*PARTE DE LAS SECCIONES*/
+
+.seccion {
+
+    padding: 4%;
+    padding-top: 0;
+    background: rgb(46, 46, 46);
+}
+
+.seccion h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6vh;
+    color: white;
+}
+
+.seccion p {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3.1vh;
+    color: white;
+}
+
+.seccion {
+    display: flex; /* Cambiamos a flexbox */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: stretch; /* Los elementos se estiran para ocupar todo el ancho */
+    padding: 4%;
+    padding-top: 0;
+    background: rgb(46, 46, 46);
+}
+
+.seccion .notas_contenedor {
+    border: 3px solid wheat;
+}
+
+.seccion .agregar_nota {
+    position: sticky;
+    top: 100%;
+    margin-top: 3%;
+    border-radius: 5px;
+    height: 40px;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 40px;
+    font-size: 3vh;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+.seccion .agregar_nota::placeholder{
+    color: black;
 }
