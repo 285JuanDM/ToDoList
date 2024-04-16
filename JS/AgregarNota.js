@@ -16,5 +16,8 @@ input_nota.addEventListener('keypress', (event) =>{
 
         const numInputs = contenedor_notas.querySelectorAll('label').length;
         contenedor_notas.style.gridTemplateRows = `repeat(${numInputs}, 6.5vh)`;
+
+        contenedor_notas.scrollTop = contenedor_notas.scrollHeight;
+        
     }
 })
