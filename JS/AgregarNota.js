@@ -18,6 +18,9 @@ input_nota.addEventListener('keypress', (event) =>{
         contenedor_notas.style.gridTemplateRows = `repeat(${numInputs}, 6.5vh)`;
 
         contenedor_notas.scrollTop = contenedor_notas.scrollHeight;
-        
+        contenedor_notas.style.webkitUserSelect = 'none';
+        contenedor_notas.style.mozUserSelect = 'none';
+        contenedor_notas.style.msUserSelect = 'none';
+        contenedor_notas.style.userSelect = 'none';
     }
 })
