@@ -64,7 +64,8 @@ hr {
 
 .botones_variables {
     display: grid;
-    grid-template-rows: repeat(3, 50px);
+    overflow-y:scroll;
+    max-height: 22.5vw;
 }
 
 .crea_botones {
@@ -233,7 +234,11 @@ input[type="checkbox"]{
 /* Scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 3px;
+}
+
+.botones_variables::-webkit-scrollbar {
+    width: 0px;
 }
 
 ::-webkit-scrollbar-track {
